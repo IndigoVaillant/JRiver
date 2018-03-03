@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<Actions>
+	<Action id="sendCommand">
+		<Name>Send Playback (Select Zone)</Name>
+		<ConfigUI>
+			<Field id="zoneSelect" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.zone"/>
+			</Field>
+			<Field id="command" type="menu">
+				<Label>Playback:</Label>
+				<List>
+					<Option value="PlayPause">Play/Pause (Toggle)</Option>
+					<Option value="Play">Play</Option>
+					<Option value="PauseToggle">Pause (Toggle)</Option>
+					<Option value="PauseOn">Pause On</Option>
+					<Option value="PauseOff">Pause Off</Option>
+					<Option value="Next">Next</Option>
+					<Option value="Previous">Previous</Option>
+					<Option value="FastForward">Fast Forward</Option>
+					<Option value="Rewind">Rewind</Option>
+					<Option value="Stop">Stop</Option>
+					<Option value="VolumeUp">Volume Up</Option>
+					<Option value="VolumeDown">Volume Down</Option>
+					<Option value="VolumeMuteToggle">Mute (Toggle)</Option>
+					<Option value="VolumeMuteOn">Mute On</Option>
+					<Option value="VolumeMuteOff">Mute Off</Option>
+					<Option value="ShuffleToggle">Shuffle (Toggle)</Option>
+					<Option value="ShuffleOn">Shuffle On</Option>
+					<Option value="ShuffleOff">Shuffle Off</Option>
+					<Option value="ClearPlaylist">Clear Playlist</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>sendCommand</CallbackMethod>
+	</Action>
+	<Action id="sendCommandCurrentZone">
+		<Name>Send Playback Current Zone</Name>
+		<ConfigUI>
+			<Field id="command" type="menu">
+				<Label>Playback:</Label>
+				<List>
+					<Option value="PlayPause">Play/Pause (Toggle)</Option>
+					<Option value="Play">Play</Option>
+					<Option value="PauseToggle">Pause (Toggle)</Option>
+					<Option value="PauseOn">Pause On</Option>
+					<Option value="PauseOff">Pause Off</Option>
+					<Option value="Next">Next</Option>
+					<Option value="Previous">Previous</Option>
+					<Option value="FastForward">Fast Forward</Option>
+					<Option value="Rewind">Rewind</Option>
+					<Option value="Stop">Stop</Option>
+					<Option value="VolumeUp">Volume Up</Option>
+					<Option value="VolumeDown">Volume Down</Option>
+					<Option value="VolumeMuteToggle">Mute (Toggle)</Option>
+					<Option value="VolumeMuteOn">Mute On</Option>
+					<Option value="VolumeMuteOff">Mute Off</Option>
+					<Option value="ShuffleToggle">Shuffle (Toggle)</Option>
+					<Option value="ShuffleOn">Shuffle On</Option>
+					<Option value="ShuffleOff">Shuffle Off</Option>
+					<Option value="ClearPlaylist">Clear Playlist</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>sendCommandCurrentZone</CallbackMethod>
+	</Action>
+	<Action id="setCommandView">
+		<Name>Set View</Name>
+		<ConfigUI>
+			<Field id="command" type="menu">
+				<Label>Views:</Label>
+				<List>
+					<Option value="StandardView">Standard View</Option>
+					<Option value="MiniView">Mini View</Option>
+					<Option value="TheaterView">Theater View</Option>
+					<Option value="CoverView">Cover View</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>setCommandView</CallbackMethod>
+	</Action>
+	
+	<Action id="sendKey">
+		<Name>Send Key</Name>
+		<ConfigUI>
+			<Field id="command" type="menu">
+				<Label>Keys:</Label>
+				<List>
+					<Option value="KeyUp">Key Up</Option>
+					<Option value="KeyDown">Key Down</Option>
+					<Option value="KeyLeft">Key Left</Option>
+					<Option value="KeyRight">Key Right</Option>
+					<Option value="KeyEnter">Key Enter</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>sendKey</CallbackMethod>
+	</Action>
+	
+	<Action id="setZone">
+		<Name>Set Zone</Name>
+		<ConfigUI>
+			<Field id="zoneSelect" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.zone"/>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>setZone</CallbackMethod>
+	</Action>
+	<Action id="toggleZone">
+		<Name>Toggle Zone</Name>
+		<ConfigUI>
+			<Field id="command" type="menu">
+				<Label>Direction:</Label>
+				<List>
+					<Option value="ToggleZoneForward">Forward</Option>
+					<Option value="ToggleZoneBackwards">Backwards</Option>
+				</List>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>toggleZone</CallbackMethod>
+	</Action>
+	<Action id="copyArt">
+		<Name>Copy Art</Name>
+		<ConfigUI>
+			<Field id="server" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.server"/>
+			</Field>
+			<Field id="size" type="menu">
+				<Label>ThumbnailSize:</Label>
+				<List>
+					<Option value="Small">Small</Option>
+					<Option value="Medium">Medium</Option>
+					<Option value="Large">Large</Option>
+				</List>
+			</Field>
+			<Field id="destinationMusic" type="textfield" defaultValue = "e.g.: /Users/USER_NAME/Pictures/ImageArtMusic.png">
+				<Label>Save to Filename (Music):</Label>
+			</Field>
+			<Field id="destinationMovies" type="textfield" defaultValue = "e.g.: /Users/USER_NAME/Pictures/ImageArtMovies.png">
+				<Label>Save to Filename (Movies):</Label>
+			</Field>
+			<Field id="noArtworkFilename" type="textfield" defaultValue = "e.g.: /Users/USER_NAME/Pictures/NoImageArt.png">
+				<Label>No Current Media Filename:</Label>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>copyArt</CallbackMethod>
+	</Action>
+	<Action id="playFile">
+		<Name>Play File</Name>
+		<ConfigUI>
+			<Field id="zoneSelect" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.zone"/>
+			</Field>
+			<Field id="space" type="label">
+				<Label>Play File (Database Key).</Label>
+			</Field>
+			<Field id="databaseKey" type="textfield" defaultValue = "-1">
+				<Label>Database Key:</Label>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>playFile</CallbackMethod>
+	</Action>
+	<Action id="playPlaylist">
+		<Name>Play Playlist</Name>
+		<ConfigUI>
+			<Field id="zoneSelect" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.zone"/>
+			</Field>
+			<Field id="space" type="label">
+				<Label>Play Playlist (ID).</Label>
+			</Field>
+			<Field id="databaseID" type="textfield" defaultValue = "-1">
+				<Label>Database ID:</Label>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>playPlaylist</CallbackMethod>
+	</Action>
+	<Action id="setVolume">
+		<Name>Set Volume</Name>
+		<ConfigUI>
+			<Field id="zoneSelect" type="menu">
+				<Label>Zone:</Label>
+				<List class="indigo.devices" filter="self.zone"/>
+			</Field>
+			<Field id="space" type="label">
+				<Label>Set Volume Percentage.</Label>
+			</Field>
+			<Field id="volumePercentage" type="textfield" defaultValue = "100">
+				<Label>Percentage:</Label>
+			</Field>
+		</ConfigUI>
+		<CallbackMethod>setVolume</CallbackMethod>
+	</Action>
+</Actions>

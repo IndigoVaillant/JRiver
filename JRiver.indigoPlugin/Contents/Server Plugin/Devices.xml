@@ -1,0 +1,389 @@
+<?xml version="1.0"?>
+
+<Devices>
+	<Device id="server" type="custom">
+		<Name>Server</Name>
+		<ConfigUI>
+			<Field id="space1" type="label">
+				<Label>For Media Center 20 from JRiver.</Label>
+			</Field>
+			<Field id="space2" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="space3" type="label">
+				<Label>IP-number of JRiver Media Center.</Label>
+			</Field>
+			<Field id="ip" type="textfield" defaultValue = "">
+				<Label>IP-number:</Label>
+			</Field>
+			<Field id="space4" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="space5" type="label">
+				<Label>Port-number of JRiver Media Center.</Label>
+			</Field>
+			<Field id="port" type="textfield" defaultValue = "52199">
+				<Label>Port-number:</Label>
+			</Field>
+			<Field id="space6" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="space7" type="label">
+				<Label>Token of JRiver Media Center.</Label>
+			</Field>
+			<Field id="token" type="textfield" defaultValue = "">
+				<Label>Token:</Label>
+			</Field>
+			<Field id="space8" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="space9" type="label">
+				<Label>Enable polling for status updates.</Label>
+			</Field>
+			<Field id="space10" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="polling" type="checkbox" defaultValue="False">
+				<Label>Enable Polling:</Label>
+			</Field>
+			<Field id="seconds" type="textfield" defaultValue = "5" visibleBindingId="polling" visibleBindingValue="true">
+				<Label>Seconds:</Label>
+			</Field>
+			<Field id="space11" type="label">
+				<Label> </Label>
+			</Field>
+		</ConfigUI>
+<!-- States -->
+		<States>
+			<State id="state">
+				<ValueType>String</ValueType>
+				<TriggerLabel>State</TriggerLabel>
+				<ControlPageLabel>State</ControlPageLabel>
+			</State>
+			<State id="status">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Status</TriggerLabel>
+				<ControlPageLabel>Status</ControlPageLabel>
+			</State>
+			<State id="numberZones">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Number Zones</TriggerLabel>
+				<ControlPageLabel>State</ControlPageLabel>
+			</State>
+			<State id="currentZoneID">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Current Zone ID</TriggerLabel>
+				<ControlPageLabel>Current Zone ID</ControlPageLabel>
+			</State>
+			<State id="currentZoneIndex">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Current Zone Index</TriggerLabel>
+				<ControlPageLabel>Current Zone Index</ControlPageLabel>
+			</State>
+			<State id="viewMode">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>View Mode</TriggerLabel>
+				<ControlPageLabel>View Mode</ControlPageLabel>
+			</State>
+			<State id="viewModeInternal">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>View Mode Internal</TriggerLabel>
+				<ControlPageLabel>View Mode Internal</ControlPageLabel>
+			</State>
+			<State id="fileKey">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>File Key</TriggerLabel>
+				<ControlPageLabel>File Key</ControlPageLabel>
+			</State>
+			<State id="nextFileKey">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Next File Key</TriggerLabel>
+				<ControlPageLabel>Next File Key</ControlPageLabel>
+			</State>
+			<State id="positionMS">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Position MS</TriggerLabel>
+				<ControlPageLabel>Position MS</ControlPageLabel>
+			</State>
+			<State id="durationMS">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Duration MS</TriggerLabel>
+				<ControlPageLabel>Duration MS</ControlPageLabel>
+			</State>
+			<State id="elapsedTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Elapsed Time Display</TriggerLabel>
+				<ControlPageLabel>Elapsed Time Display</ControlPageLabel>
+			</State>
+			<State id="remainingTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Remaining Time Display</TriggerLabel>
+				<ControlPageLabel>Remaining Time Display</ControlPageLabel>
+			</State>
+			<State id="totalTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Total Time Display</TriggerLabel>
+				<ControlPageLabel>Total Time Display</ControlPageLabel>
+			</State>
+			<State id="positionDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Position Display</TriggerLabel>
+				<ControlPageLabel>Position Display</ControlPageLabel>
+			</State>
+			<State id="playingNowPosition">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Position</TriggerLabel>
+				<ControlPageLabel>Playing Now Position</ControlPageLabel>
+			</State>
+			<State id="playingNowTracks">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Tracks</TriggerLabel>
+				<ControlPageLabel>Playing Now Tracks</ControlPageLabel>
+			</State>
+			<State id="playingNowPositionDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Playing Now Position Display</TriggerLabel>
+				<ControlPageLabel>Playing Now Position Display</ControlPageLabel>
+			</State>
+			<State id="playingNowChangeCounter">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Change Counter</TriggerLabel>
+				<ControlPageLabel>Playing Now Change Counter</ControlPageLabel>
+			</State>
+			<State id="bitrate">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Bitrate</TriggerLabel>
+				<ControlPageLabel>Bitrate</ControlPageLabel>
+			</State>
+			<State id="bitdepth">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Bitdepth</TriggerLabel>
+				<ControlPageLabel>Bitdepth</ControlPageLabel>
+			</State>
+			<State id="sampleRate">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Sample Rate</TriggerLabel>
+				<ControlPageLabel>Sample Rate</ControlPageLabel>
+			</State>
+			<State id="channels">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Channels</TriggerLabel>
+				<ControlPageLabel>Channels</ControlPageLabel>
+			</State>
+			<State id="chapter">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Chapter</TriggerLabel>
+				<ControlPageLabel>Chapter</ControlPageLabel>
+			</State>
+			<State id="volume">
+				<ValueType>Float</ValueType>
+				<TriggerLabel>Volume</TriggerLabel>
+				<ControlPageLabel>Volume</ControlPageLabel>
+			</State>
+			<State id="volumeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Volume Display</TriggerLabel>
+				<ControlPageLabel>Volume Display</ControlPageLabel>
+			</State>
+			<State id="imageURL">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Image URL</TriggerLabel>
+				<ControlPageLabel>Image URL</ControlPageLabel>
+			</State>
+			<State id="artist">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Artist</TriggerLabel>
+				<ControlPageLabel>Artist</ControlPageLabel>
+			</State>
+			<State id="album">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Album</TriggerLabel>
+				<ControlPageLabel>Album</ControlPageLabel>
+			</State>
+			<State id="name">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Name</TriggerLabel>
+				<ControlPageLabel>Name</ControlPageLabel>
+			</State>
+			<State id="zoneStatus">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Zone Status</TriggerLabel>
+				<ControlPageLabel>Zone Status</ControlPageLabel>
+			</State>
+			<State id="zoneState">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Zone State</TriggerLabel>
+				<ControlPageLabel>Zone State</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>state</UiDisplayStateId>
+	</Device>
+	<Device id="zone" type="custom">
+		<Name>Zone</Name>
+			<ConfigUI>
+			<Field id="space1" type="label">
+				<Label> </Label>
+			</Field>
+			<Field id="space2" type="label">
+				<Label>                             *** For Media Center from JRiver ***</Label>
+			</Field>
+			<Field id="space3" type="label" fontSize = "small" fontColor="Blue">
+				<Label>                         Zones will auto create when defined in JRiver.</Label>
+			</Field>
+			</ConfigUI>
+<!-- States -->
+		<States>
+			<State id="state">
+				<ValueType>String</ValueType>
+				<TriggerLabel>State</TriggerLabel>
+				<ControlPageLabel>State</ControlPageLabel>
+			</State>
+			<State id="status">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Status</TriggerLabel>
+				<ControlPageLabel>Status</ControlPageLabel>
+			</State>
+			<State id="zoneName">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Zone Name</TriggerLabel>
+				<ControlPageLabel>Zone Name</ControlPageLabel>
+			</State>
+			<State id="zoneID">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Zone ID</TriggerLabel>
+				<ControlPageLabel>Zone ID</ControlPageLabel>
+			</State>
+			<State id="zoneState">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Zone State</TriggerLabel>
+				<ControlPageLabel>Zone State</ControlPageLabel>
+			</State>
+			<State id="fileKey">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>File Key</TriggerLabel>
+				<ControlPageLabel>File Key</ControlPageLabel>
+			</State>
+			<State id="nextFileKey">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Next File Key</TriggerLabel>
+				<ControlPageLabel>Next File Key</ControlPageLabel>
+			</State>
+			<State id="positionMS">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Position MS</TriggerLabel>
+				<ControlPageLabel>Position MS</ControlPageLabel>
+			</State>
+			<State id="durationMS">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Duration MS</TriggerLabel>
+				<ControlPageLabel>Duration MS</ControlPageLabel>
+			</State>
+			<State id="elapsedTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Elapsed Time Display</TriggerLabel>
+				<ControlPageLabel>Elapsed Time Display</ControlPageLabel>
+			</State>
+			<State id="remainingTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Remaining Time Display</TriggerLabel>
+				<ControlPageLabel>Remaining Time Display</ControlPageLabel>
+			</State>
+			<State id="totalTimeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Total Time Display</TriggerLabel>
+				<ControlPageLabel>Total Time Display</ControlPageLabel>
+			</State>
+			<State id="positionDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Position Display</TriggerLabel>
+				<ControlPageLabel>Position Display</ControlPageLabel>
+			</State>
+			<State id="playingNowPosition">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Position</TriggerLabel>
+				<ControlPageLabel>Playing Now Position</ControlPageLabel>
+			</State>
+			<State id="playingNowTracks">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Tracks</TriggerLabel>
+				<ControlPageLabel>Playing Now Tracks</ControlPageLabel>
+			</State>
+			<State id="playingNowPositionDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Playing Now Position Display</TriggerLabel>
+				<ControlPageLabel>Playing Now Position Display</ControlPageLabel>
+			</State>
+			<State id="playingNowChangeCounter">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Playing Now Change Counter</TriggerLabel>
+				<ControlPageLabel>Playing Now Change Counter</ControlPageLabel>
+			</State>
+			<State id="bitrate">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Bitrate</TriggerLabel>
+				<ControlPageLabel>Bitrate</ControlPageLabel>
+			</State>
+			<State id="bitdepth">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Bitdepth</TriggerLabel>
+				<ControlPageLabel>Bitdepth</ControlPageLabel>
+			</State>
+			<State id="sampleRate">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Sample Rate</TriggerLabel>
+				<ControlPageLabel>Sample Rate</ControlPageLabel>
+			</State>
+			<State id="channels">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Channels</TriggerLabel>
+				<ControlPageLabel>Channels</ControlPageLabel>
+			</State>
+			<State id="chapter">
+				<ValueType>Integer</ValueType>
+				<TriggerLabel>Chapter</TriggerLabel>
+				<ControlPageLabel>Chapter</ControlPageLabel>
+			</State>
+			<State id="volume">
+				<ValueType>Float</ValueType>
+				<TriggerLabel>Volume</TriggerLabel>
+				<ControlPageLabel>Volume</ControlPageLabel>
+			</State>
+			<State id="volumeDisplay">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Volume Display</TriggerLabel>
+				<ControlPageLabel>Volume Display</ControlPageLabel>
+			</State>
+			<State id="imageURL">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Image URL</TriggerLabel>
+				<ControlPageLabel>Image URL</ControlPageLabel>
+			</State>
+			<State id="artist">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Artist</TriggerLabel>
+				<ControlPageLabel>Artist</ControlPageLabel>
+			</State>
+			<State id="album">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Album</TriggerLabel>
+				<ControlPageLabel>Album</ControlPageLabel>
+			</State>
+			<State id="name">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Name</TriggerLabel>
+				<ControlPageLabel>Name</ControlPageLabel>
+			</State>
+			<State id="zoneStatus">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Zone Status</TriggerLabel>
+				<ControlPageLabel>Zone Status</ControlPageLabel>
+			</State>
+			<State id="linkedZones">
+				<ValueType>String</ValueType>
+				<TriggerLabel>Linked Zones</TriggerLabel>
+				<ControlPageLabel>Linked Zones</ControlPageLabel>
+			</State>
+		</States>
+		<UiDisplayStateId>state</UiDisplayStateId>
+	</Device>
+</Devices>

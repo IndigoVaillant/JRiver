@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PluginVersion</key>
+	<string>0.4.020</string>
+	<key>ServerApiVersion</key>
+	<string>1.19</string>
+	<key>IwsApiVersion</key>
+	<string>1.0.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>JRiver</string>
+	<key>CFBundleName</key>
+	<string>JRiver</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.vaillant.indigoplugin.JRiver</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>http://www.perceptiveautomation.com/wiki/doku.php?id=plugins:JRiver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
